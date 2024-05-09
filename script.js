@@ -1,9 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var gifElement = document.getElementById('gif');
-});
 function antwort(antwort) {
     var ausgabeElement = document.getElementById('ausgabe');
     var gifElement = document.getElementById('gif');
+
 
     if (antwort === 'Ja') {
         ausgabeElement.innerHTML = 'Yippie!!!';

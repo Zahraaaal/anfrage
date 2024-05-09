@@ -15,9 +15,10 @@ function antwort(antwort) {
             title: 'Jemand möchte mit dir rausgehen!',
             showConfirmButton: false,
             timer: 1500 }).then((result) => {
+            }).then((result) => {
                 if (result.isConfirmed) {
-                    // Hier kannst du die Logik ausführen, die nach Bestätigung der Benachrichtigung erfolgen soll
-                    console.log('Benutzer hat die Benachrichtigung bestätigt.');
+                    // Benachrichtigung, wenn "Ja" geklickt wird
+                    alert('Jemand möchte mit dir rausgehen!');
                 }
             });
         

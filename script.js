@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 document.addEventListener('DOMContentLoaded', function () {
     var gifElement = document.getElementById('gif');
 });
@@ -13,8 +14,13 @@ function antwort(antwort) {
             icon: 'success',
             title: 'Jemand möchte mit dir rausgehen!',
             showConfirmButton: false,
-            timer: 1500
-        });
+            timer: 1500 }).then((result) => {
+                if (result.isConfirmed) {
+                    // Hier kannst du die Logik ausführen, die nach Bestätigung der Benachrichtigung erfolgen soll
+                    console.log('Benutzer hat die Benachrichtigung bestätigt.');
+                }
+            });
+        
     } else if (antwort === 'Nein') {
         ausgabeElement.innerHTML = 'Bitte erneut versuchen!';
         gifElement.src = 'https://media0.giphy.com/media/nR4L10XlJcSeQ/200.webp?cid=ecf05e474unpobgelo9s9c9ylhn7ft0kjs13qsk5d7a8uac0&ep=v1_gifs_search&rid=200.webp&ct=g'; // URL für das "Nein"-GIF
